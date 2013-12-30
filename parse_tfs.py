@@ -59,9 +59,11 @@ def main():
     # get writable copy
     result_book = xlcopy(workbook)
     result_sheet = result_book.get_sheet(0)
+
     for row_i in range(1, sheet.nrows):
         steps = None
         expected_results = None
+
         for col_i in range(sheet.ncols):
             value = sheet.cell_value(row_i, col_i)
 
